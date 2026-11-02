@@ -1,0 +1,9 @@
+# Compiled bytecode (rebuilt by javac)
+*.class
+
+# IntelliJ build output
+out/
+
+# IntelliJ personal settings
+.idea/
+*.iml
