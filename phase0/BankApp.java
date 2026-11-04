@@ -5,7 +5,9 @@ public class BankApp {
 
 
         priya.deposit(500.0);
-        rahul.deposit(-100.0);
+        rahul.deposit(100.0);
+        priya.withdraw(400);
+        rahul.withdraw(120);
         System.out.println(priya.getOwnerName() + " has " + priya.getBalance());
         System.out.println(rahul.getOwnerName() + " has " + rahul.getBalance());
         System.out.println("Total accounts: " + Account.getTotalAccountsOpened());

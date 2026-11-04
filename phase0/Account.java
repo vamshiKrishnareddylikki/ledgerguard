@@ -28,4 +28,15 @@ public class Account {
         }
         balance = balance + amount;
     }
+    public void withdraw(double amount){
+        if(amount <= 0){
+            System.out.println("Rejected: withdraw must be positive, got " + amount);
+            return;
+        } else if (amount > balance) {
+            System.out.println("Rejected: insufficient balance. Requested " + amount + ", available " + balance);
+            return;
+
+        }
+        balance -= amount;
+    }
 }
