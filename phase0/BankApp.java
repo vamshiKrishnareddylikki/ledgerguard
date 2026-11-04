@@ -1,6 +1,6 @@
 public class BankApp {
     public static void main(String[] args){
-        Account priya = new Account("ACC-1--1", "Priya");
+        Account priya = new Account("ACC-1001", "Priya");
         Account rahul = new Account("ACC-1002", "Rahul");
 
 
