@@ -1,5 +1,5 @@
 public class Account {
-    private String accountNumber;
+    private final String accountNumber;
     private String ownerName;
     private double balance;
     private static int totalAccountsOpened;
@@ -21,6 +21,7 @@ public class Account {
     public static  int getTotalAccountsOpened(){
         return totalAccountsOpened;
     }
+
     public void deposit(double amount){
         if (amount <= 0){
             System.out.println("Rejected: deposit must be positive, got " + amount);
@@ -39,4 +40,5 @@ public class Account {
         }
         balance -= amount;
     }
+
 }
