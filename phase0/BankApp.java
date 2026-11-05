@@ -16,5 +16,10 @@ public class BankApp {
         anita.addMonthlyInterest();
         System.out.println(anita.getOwnerName() + " has " + anita.getBalance());
         System.out.println("Total accounts: " + Account.getTotalAccountsOpened());
+        CheckingAccount ravi = new CheckingAccount("ACC-3001", "Ravi", 200.0);
+        ravi.deposit(100.0);
+        ravi.withdraw(250.0);   // allowed? balance after?
+        ravi.withdraw(100.0);   // allowed? why or why not?
+        System.out.println(ravi.getOwnerName() + " has " + ravi.getBalance());
     }
 }
