@@ -39,12 +39,15 @@ public class Account {
         if (amount <= 0) {
             System.out.println("Rejected: withdraw must be positive, got " + amount);
             return;
-        } else if (amount > balance) {
+        } else if (amount > availableFunds()) {
             System.out.println("Rejected: insufficient balance. Requested " + amount + ", available " + balance);
             return;
 
         }
         balance -= amount;
+    }
+    protected double availableFunds() {
+        return balance;
     }
 
 }
