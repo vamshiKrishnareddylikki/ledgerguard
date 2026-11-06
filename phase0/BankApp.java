@@ -1,5 +1,5 @@
 public class BankApp {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Account priya = new SavingsAccount("ACC-1001", "Priya", 0.04);
         Account rahul = new CheckingAccount("ACC-1002", "Rahul", 100.0);
 
@@ -18,8 +18,8 @@ public class BankApp {
         System.out.println("Total accounts: " + Account.getTotalAccountsOpened());
         CheckingAccount ravi = new CheckingAccount("ACC-3001", "Ravi", 200.0);
         ravi.deposit(100.0);
-        ravi.withdraw(250.0);   // allowed? balance after?
-        ravi.withdraw(100.0);   // allowed? why or why not?
+        ravi.withdraw(250.0);
+        ravi.withdraw(100.0);
         System.out.println(ravi.getOwnerName() + " has " + ravi.getBalance());
     }
 }

@@ -8,6 +8,8 @@ public class SavingsAccount extends Account{
     }
     public void addMonthlyInterest(){
         double interest = getBalance() * annualInterestRate / 12;
-        deposit(interest);
+        if (interest <= 0) {
+            return;
+        }
     }
 }

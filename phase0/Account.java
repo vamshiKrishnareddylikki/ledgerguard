@@ -4,7 +4,7 @@ public abstract class Account {
     private double balance;
     private static int totalAccountsOpened;
 
-    Account(String accountNumber, String ownerName) {
+    protected Account(String accountNumber, String ownerName) {
         this.accountNumber = accountNumber;
         this.ownerName = ownerName;
         this.balance = 0.0;
