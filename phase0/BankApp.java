@@ -1,7 +1,7 @@
 public class BankApp {
     public static void main(String[] args){
-        Account priya = new Account("ACC-1001", "Priya");
-        Account rahul = new Account("ACC-1002", "Rahul");
+        Account priya = new SavingsAccount("ACC-1001", "Priya", 0.04);
+        Account rahul = new CheckingAccount("ACC-1002", "Rahul", 100.0);
 
 
         priya.deposit(500.0);

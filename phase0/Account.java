@@ -1,4 +1,4 @@
-public class Account {
+public abstract class Account {
     private final String accountNumber;
     private String ownerName;
     private double balance;
