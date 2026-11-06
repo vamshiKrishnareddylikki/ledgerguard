@@ -1,10 +1,10 @@
-public class Account {
+public abstract class Account {
     private final String accountNumber;
     private String ownerName;
     private double balance;
     private static int totalAccountsOpened;
 
-    Account(String accountNumber, String ownerName) {
+    protected Account(String accountNumber, String ownerName) {
         this.accountNumber = accountNumber;
         this.ownerName = ownerName;
         this.balance = 0.0;
@@ -39,12 +39,16 @@ public class Account {
         if (amount <= 0) {
             System.out.println("Rejected: withdraw must be positive, got " + amount);
             return;
-        } else if (amount > balance) {
-            System.out.println("Rejected: insufficient balance. Requested " + amount + ", available " + balance);
+        } else if (amount > availableFunds()) {
+            System.out.println("Rejected: insufficient balance. Requested " + amount + ", available " + availableFunds());
             return;
 
         }
         balance -= amount;
+    }
+
+    protected double availableFunds() {
+        return balance;
     }
 
 }
