@@ -50,9 +50,6 @@ public abstract class Account {
     protected double availableFunds() {
         return balance;
     }
-    @Override
-    public String toString() {
-        return getClass().getSimpleName() + "[" + accountNumber + ", " + ownerName + ", balance=" + balance + "]";
-    }
+
 
 }
