@@ -23,8 +23,11 @@ public class BankApp {
         ravi.withdraw(250.0);
         ravi.withdraw(100.0);
         System.out.println(ravi.getOwnerName() + " has " + ravi.getBalance());
-        Transaction t = new Transaction("ACC-1001", TransactionType.DEPOSIT, 500.0, LocalDateTime.now());
-        System.out.println(t);
-        System.out.println("Amount: " + t.amount());
+
+        Transaction a = Transaction.create("ACC-1001", TransactionType.DEPOSIT, 500.0);
+        Transaction b = Transaction.create("ACC-1001", TransactionType.DEPOSIT, 500.0);
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(a.equals(b));
     }
 }
