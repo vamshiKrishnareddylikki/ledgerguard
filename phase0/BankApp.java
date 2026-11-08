@@ -1,3 +1,5 @@
+import java.time.LocalDateTime;
+
 public class BankApp {
     public static void main(String[] args) {
         Account priya = new SavingsAccount("ACC-1001", "Priya", 0.04);
@@ -21,5 +23,11 @@ public class BankApp {
         ravi.withdraw(250.0);
         ravi.withdraw(100.0);
         System.out.println(ravi.getOwnerName() + " has " + ravi.getBalance());
+
+        Transaction a = Transaction.create("ACC-1001", TransactionType.DEPOSIT, 500.0);
+        Transaction b = Transaction.create("ACC-1001", TransactionType.DEPOSIT, 500.0);
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(a.equals(b));
     }
 }
